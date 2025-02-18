@@ -2,39 +2,27 @@
 #include <time.h>
 #include <stdio.h>
 
-/**
- * main - Point d'entrée du programme
- *
- * Description : Cette fonction génère un nombre aléatoire, calcule son dernier chiffre,
- * et affiche ce dernier chiffre avec le message approprié.
- *
- * Retour : 0 (succès)
- */
 int main(void)
 {
     int n;
-    int Dernier_chiffre;
+    int dernier_chiffre;  // Déclaration de la variable en minuscules
 
-    srand(time(0)); /* Initialise le générateur de nombres aléatoires */
-    n = rand() - RAND_MAX / 2; /* Génère un nombre aléatoire */
+    srand(time(0)); 
+    n = rand() - RAND_MAX / 2;
 
-    dernier_chiffre = n % 10; /* Obtenez le dernier chiffre du nombre */
+    dernier_chiffre = n % 10;  // Utilisation correcte de la variable
 
-    /* Affiche la première partie de la sortie */
-    printf("Dernier chiffre de %d est %d", n, dernier_chiffre);
-
-    /* Vérifie la valeur du dernier chiffre et affiche le message correspondant */
-    if (dernier_chiffre > 5)
+    if (n > 0)
     {
-        printf(" et est supérieur à 5\n");
+        printf("Last digit of %d is %d and is greater than 5\n", n, dernier_chiffre);
     }
-    else if (dernier_chiffre == 0)
+    else if (n == 0)
     {
-        printf(" et est 0\n");
+        printf("Last digit of %d is %d and is 0\n", n, dernier_chiffre);
     }
     else
     {
-        printf(" et est inférieur à 6 et différent de 0\n");
+        printf("Last digit of %d is %d and is less than 6 and not 0\n", n, dernier_chiffre);
     }
 
     return 0;
