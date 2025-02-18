@@ -1,18 +1,28 @@
-julien@ubuntu:~/$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 0-positive_or_negative.c -o 0-positive_or_negative
-julien@ubuntu:~/$ ./0-positive_or_negative 
--520693284 is negative
-julien@ubuntu:~/$ ./0-positive_or_negative 
--973398895 is negative
-julien@ubuntu:~/$ ./0-positive_or_negative 
--199220452 is negative
-julien@ubuntu:~/$ ./0-positive_or_negative 
-561319348 is positive
-julien@ubuntu:~/$ ./0-positive_or_negative 
-561319348 is positive
-julien@ubuntu:~/$ ./0-positive_or_negative 
-266853958 is positive
-julien@ubuntu:~/$ ./0-positive_or_negative 
--48147767 is negative
-julien@ubuntu:~/$ ./0-positive_or_negative 
-0 is zero
-julien@ubuntu:~/$ 
+gcc -o positive_or_negative -Wall -Werror -Wextra -pedantic -std=gnu89 0-positive_or_negative.c
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
+
+int main(void)
+{
+    int n;
+
+    srand(time(0));
+    n = rand() - RAND_MAX / 2;
+
+    if (n > 0)
+    {
+        printf("%d is positive\n", n);
+    }
+    else if (n == 0)
+    {
+        printf("%d is zero\n", n);
+    }
+    else
+    {
+        printf("%d is negative\n", n);
+    }
+
+    return 0;
+}
+
