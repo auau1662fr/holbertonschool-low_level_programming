@@ -13,7 +13,7 @@
 int main(void)
 {
     int n;
-    int dernier_chiffre;
+    int Dernier chiffre de 98 est 8 et est supérieur à 5;
 
     srand(time(0)); /* Initialise le générateur de nombres aléatoires */
     n = rand() - RAND_MAX / 2; /* Génère un nombre aléatoire */
