@@ -6,18 +6,18 @@
 * Description: Print all the letters except q and e
 *
 * Return: Always 0 (Success)
-*/
+*/+
 int main(void)
 {
-		char c;
+	int i = 97;
 
-		for (c = 'a'; c <= 'z'; c++)
-	{
-		if (c != 'q' && c != 'e')
-	{
-		putchar(c);
-	}
-	}
-		putchar('\n');
-		return (0);
+	do {
+	if (i != 101 && i != 113)
+	putchar(i);
+	i++;
+	} while (i <= 122);
+
+	putchar('\n');
+	return (0);
 }
+
