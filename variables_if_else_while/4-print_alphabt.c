@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /**
 * main - Entry point of the program
 *
@@ -9,6 +10,7 @@
 int main(void)
 {
 		char c;
+
 		for (c = 'a'; c <= 'z'; c++)
 	{
 		if (c != 'q' && c != 'e')
@@ -19,4 +21,3 @@ int main(void)
 		putchar('\n');
 		return (0);
 }
-
