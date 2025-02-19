@@ -13,7 +13,7 @@
 int main(void)
 {
 	int n;
-	int Last_digit;
+	int last_digit;
 
 	srand(time(0));
 	n = rand();
