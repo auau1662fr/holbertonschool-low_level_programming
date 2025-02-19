@@ -11,14 +11,14 @@
 
 int main(void)
 {
-    int i = 122;
+	int i = 122;
 
-    do {
+	do {
 	putchar(i);
 	i--;
-    } while (i >= 97);
+	} while (i >= 97);
 
-    putchar('\n');
-    return (0);
+	putchar('\n');	
+	return (0);
 }
 
