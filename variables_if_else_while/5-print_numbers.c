@@ -11,7 +11,7 @@
 int main(void)
 {
 	int i = 0;
-	
+
 	do {
 	putchar(i + '0');
 	i++;
