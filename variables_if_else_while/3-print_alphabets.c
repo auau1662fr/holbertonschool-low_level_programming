@@ -10,18 +10,21 @@
 
 int main(void)
 {
-	char c;
-
-	for (c = 'a'; c <= 'z'; c++)
+	int i = 97;
+	while (i <= 122)
 	{
-		putchar(c);
+	putchar(i);
+	i++;
 	}
-	for (c = 'A'; c <= 'Z'; c++)
+
+	i = 65;
+	while (i <= 90)
 	{
-		putchar(c);
+	putchar(i);
+	i++;
 	}
 
 	putchar('\n');
-
 	return (0);
 }
+
