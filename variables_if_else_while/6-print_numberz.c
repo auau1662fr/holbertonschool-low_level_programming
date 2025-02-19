@@ -10,14 +10,14 @@
 
 int main(void)
 {
-	int num;
+	int i = 0;
 
-	for (num = 0; num < 10; num++)
-	{
-	putchar(num + 48);
-	}
+	do {
+	putchar(i + '0');
+	i++;
+	} while (i < 10);
+
 	putchar('\n');
-
 	return (0);
 }
 
