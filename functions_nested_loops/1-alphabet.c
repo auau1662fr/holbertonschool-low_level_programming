@@ -9,7 +9,6 @@
 */
 
 void print_alphabet(void)
-int main(void)
 
 {
 	char letter;
@@ -23,5 +22,4 @@ int main(void)
 }
 {
 	print_alphabet();
-	return (0);
 }
