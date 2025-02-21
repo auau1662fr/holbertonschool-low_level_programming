@@ -6,13 +6,23 @@
  *
  */
 
+
+// Déclaration de la fonction _putchar
+void _putchar(char c);
+
 void print_alphabet_x10(void)
 {
-	char c;
+	int i, j;
 
-	for (c = 'a'; c <= 'z'; c++)
+	// Boucle externe qui s'exécute 10 fois
+	for (i = 0; i < 10; i++)
 	{
-		_putchar(c);
+	// Boucle interne pour imprimer l'alphabet
+	for (j = 'a'; j <= 'z'; j++)
+	{
+		_putchar(j);
 	}
-
 	_putchar('\n');
+	}
+}
+
