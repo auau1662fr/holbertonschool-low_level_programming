@@ -1,12 +1,10 @@
 #include <unistd.h>
 
 /**
-* main - Entry point of the program
-*
-* Description: prints 10 times the alphabet
-*
-* Return: Always 0 (Success)
-*/
+ *
+ * print_alphabet -  function that prints the alphabet
+ *
+ */
 
 void print_alphabet(void)
 {
