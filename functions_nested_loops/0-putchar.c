@@ -6,7 +6,6 @@
 *
 * Return: Always 0 (Success)
 */
-#include <unistd.h>
 
 int main(void)
 
@@ -14,4 +13,3 @@ int main(void)
 	write(1, "_putchar\n", 9);
 	return 0;
 }
-
