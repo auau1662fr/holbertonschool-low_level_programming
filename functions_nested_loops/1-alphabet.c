@@ -8,18 +8,25 @@
 * Return: Always 0 (Success)
 */
 
+void _putchar(char c)
+
+{
+	write(1, &c, 1);
+}
+
 void print_alphabet(void)
 
 {
-	char letter;
-
-	for (letter = 'a'; letter <= 'z'; letter++)  
-	{
-	_putchar(letter);
+	char alphabet[] = "abcdefghijklmnopqrstuvwxyz\n";
+	_putchar(alphabet[0]);
+	for (int i = 1; alphabet[i] != '\0'; i++) {
+	_putchar(alphabet[i]);
 	}
-
-	_putchar('\n');
 }
+
+int main(void)
 {
 	print_alphabet();
+	return (0);
 }
+
