@@ -1,35 +1,28 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - Entry point of the program
- *
- * Description: Print all number from 1 to 100
- * print Fizz for multiple of 3
- * print Buzz for multiple of 5
- * print FizzBuzz for both
- * separate each number by a space
- *
- * Return: Always 0 (success)
+ * print_triangle - Prints a triangle aligned to the right, using '#'
+ * @size: Size of the triangle
  */
-
-int main(void)
+void print_triangle(int size)
 {
-	int a;
+    int i, j, k;
 
-	for (a = 1; a <= 100; a++)
-	{
-		if ((a % 3 == 0) && (a % 5 == 0))
-			printf("FizzBuzz");
-		else if (a % 3 == 0)
-			printf("Fizz");
-		else if (a % 5 == 0)
-			printf("Buzz");
-		else
-			printf("%d", a);
+    if (size <= 0)
+    {
+        _putchar('\n');
+        return;
+    }
 
-		if (a != 100)
-			printf(" ");
-	}
-	printf("\n");
-	return (0);
+    for (i = 1; i <= size; i++)
+    {
+        for (j = 1; j <= size - i; j++)
+            _putchar(' ');
+        
+        for (k = 1; k <= i; k++)
+            _putchar('#');
+
+        _putchar('\n');
+    }
 }
+
