@@ -22,4 +22,6 @@ char *string_toupper(char *);
 char *cap_string(char *);
 char *leet(char *);
 void print_triangle(int size);
+void print_diagsums(int *a, int size);
+char *_strstr(char *haystack, char *needle);
 #endif
