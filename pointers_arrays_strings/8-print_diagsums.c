@@ -3,8 +3,10 @@
 
 /**
  * print_diagsums - prints the sum of the two diagonals of a square matrix
- * @a: pointer to the matrix
- * @size: the size of the matrix
+ * @a: pointer to the first element of the matrix
+ * @size: size of the matrix
+ *
+ * Return: void
  */
 void print_diagsums(int *a, int size)
 {
