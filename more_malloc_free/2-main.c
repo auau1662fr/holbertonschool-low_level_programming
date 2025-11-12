@@ -47,4 +47,4 @@ int main(void)
     simple_print_buffer(a, 98);
     free(a);
     return (0);
-
+}
