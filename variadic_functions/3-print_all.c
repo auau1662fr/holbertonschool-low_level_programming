@@ -1,6 +1,4 @@
 #include "variadic_functions.h"
-#include <stdio.h>
-#include <stdarg.h>
 
 /**
  *  print_all - Prints anything
@@ -10,55 +8,46 @@
  *  Return: void
  */
 
-void print_all(const char *format, ...)
+void print_all(const char * const format, ...)
 {
-	va_list ap;
-	unsigned int i = 0;
 	char *str;
-	int first = 1;
+	unsigned int i = 0, commaCheck = 0;
+	va_list ap;
 
 	va_start(ap, format);
 
 	while (format && format[i])
 	{
-	if (!first)
-	printf(", ");
+		if (commaCheck)
+			printf(", ");
 
-	switch (format[i])
-	{
+		switch (format[i])
+		{
 		case 'c':
-		printf("%c", va_arg(ap, int));
-		first = 0;
-		break;
-
+			printf("%c", va_arg(ap, int));
+			break;
 		case 'i':
-		printf("%d", va_arg(ap, int));
-		first = 0;
-		break;
-
+			printf("%i", va_arg(ap, int));
+			break;
 		case 'f':
-		printf("%f", va_arg(ap, double));
-		first = 0;
-		break;
-
+			printf("%f", va_arg(ap, double));
+			break;
 		case 's':
-		str = va_arg(ap, char *);
-		if (str == NULL)
-		printf("(nil)");
-		else
-			printf("%s", str);
-		first = 0;
-		break;
-
+			str = va_arg(ap, char*);
+			if (str)
+			{
+				printf("%s", str);
+				break;
+			}
+			printf("(nil)");
+			break;
 		default:
-		i++;
-		continue;
+			commaCheck = 0;
+			i++;
+			continue;
+		}
+		commaCheck = 1,	i++;
 	}
-
-	i++;
-}
-
+	putchar('\n');
 	va_end(ap);
-	printf("\n");
 }
-
