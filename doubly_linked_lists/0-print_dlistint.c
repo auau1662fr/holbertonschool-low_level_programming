@@ -1,4 +1,4 @@
-include "lists.h"
+#include "lists.h"
 #include <stdio.h>
 
 /**
@@ -19,3 +19,4 @@ size_t count = 0;
 	}
 	return (count);
 }
+
